@@ -8,7 +8,7 @@ if (pageUrl.includes("localhost")) {
 }
 
 const encodedUrl = encodeURIComponent(pageUrl);
-const messageCommande = encodeURIComponent("Je souhaite commander ce produit : ");
+const messageCommande = encodeURIComponent("bonjour clairwhy, Je souhaite commander ce produit : ");
 
 function commanderWhatsApp() {
   window.open(`https://api.whatsapp.com/send?text=${messageCommande}%20${encodedUrl}`, '_blank', 'noopener,noreferrer');
