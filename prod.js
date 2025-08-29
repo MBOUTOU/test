@@ -1,13 +1,9 @@
-//  -------------------------------------------
-const BtnCommande = document.querySelector(".btn-commande");
+const BtnCommander = document.querySelector(".btn-commande")
 
-BtnCommande.addEventListener("click", () =>{
-   PorIformation();
+BtnCommander.addEventListener("click", () =>{
+   const ProduitName = "Huile de Nila"
+   const ImageURL = "https://github.com/MBOUTOU/test/blob/main/produit%20(2).jpg";
+   const Message = `Boujour Clairwhy je souhaite commander l'${ProduitName}`;
+   const Lienwhatsapp =`https://wa.me/242068718977?text=${encodeURIComponent(Message)}`;
+   window.open(Lienwhatsapp, '_blank');
 })
-
-function PorIformation() {
-    const ProduitName = "Huile de Nila"
-    const Message = `Bonhjour Clairwhy je souhaite commender le produit ${ProduitName}`;
-    const WhatSappNumber = "242068718977";
-    const ImageUrl = "https :// "
-}
