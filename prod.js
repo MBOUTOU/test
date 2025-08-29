@@ -1,9 +1,25 @@
-const BtnCommander = document.querySelector(".btn-commande")
+const BtnCommander = document.querySelector(".btn2")
 
 BtnCommander.addEventListener("click", () =>{
-   const ProduitName = "Huile de Nila"
-   const ImageURL = "https://github.com/MBOUTOU/test/blob/main/produit%20(2).jpg";
-   const Message = `Boujour Clairwhy je souhaite commander l'${ProduitName}`;
-   const Lienwhatsapp =`https://wa.me/242068718977?text=${encodeURIComponent(Message)}`;
-   window.open(Lienwhatsapp, '_blank');
+  commanderWhatsApp();
 })
+
+// Si tu es en local, remplace par ton lien GitHub
+if (pageUrl.includes("localhost")) {
+  pageUrl = "https://mboutou.github.io/test/HuileNila.html";
+}
+
+const encodedUrl = encodeURIComponent(pageUrl);
+const messageCommande = encodeURIComponent("Je souhaite commander ce produit : ");
+
+// function commanderFacebook() {
+//   window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}&quote=${messageCommande}`, '_blank', 'noopener,noreferrer');
+// }
+
+// function commanderTwitter() {
+//   window.open(`https://twitter.com/intent/tweet?url=${pageUrl}&text=${messageCommande}`, '_blank', 'noopener,noreferrer');
+// }
+
+function commanderWhatsApp() {
+  window.open(`https://api.whatsapp.com/send?text=${messageCommande}%20${pageUrl}`, '_blank', 'noopener,noreferrer');
+}
