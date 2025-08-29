@@ -1,7 +1,7 @@
 // la partie du sorvole de la categorie 
 
 const elementNavbar =  document.querySelector(".survoleCategorie");
-const popupBlock =  elementNavbar.querySelector(".flotant-block");
+const popupBlock = elementNavbar.querySelector(".flotant-block");
 let timeoutid; 
 
 // cette ligne permet de detecter si l'apparail  est tactile ou pas !
@@ -48,17 +48,6 @@ else{
   })
 
 }
-
-
-
-
-
-
-
-
-
-
-
 // --------------------------------------------------
 
 const Navigation = document.querySelector(".btn-navigation");
@@ -109,4 +98,3 @@ let timeoutrequest;
       console.log("je suis là");
      }, 2000)
  })
- 
