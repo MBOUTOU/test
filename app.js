@@ -54,10 +54,10 @@ const Navigation = document.querySelector(".btn-navigation");
 const linksElement = document.querySelector(".nav-links");
 const bodyStyle = document.querySelector("body")
 
-  Navigation.addEventListener("click", () =>{
+  Navigation.addEventListener("click", (e) =>{
       Navigation.classList.toggle("active");
-      linksElement.classList.toggle("active")
       bodyStyle.classList.toggle("active");
+      linksElement.classList.toggle("active")
   })
 
 //   ------------------------------------------------
@@ -92,9 +92,8 @@ Allbox.forEach((box) =>{
 
 const buttonTest = document.querySelector(".btn_cash")
 let timeoutrequest;
- buttonTest.addEventListener("click", ()=>{
+ buttonTest.addEventListener("click", (e)=>{
      clearTimeout(timeoutrequest);
      timeoutrequest = setTimeout(() =>{
-      console.log("je suis là");
      }, 2000)
  })
